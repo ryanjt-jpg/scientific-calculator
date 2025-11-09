@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maroon Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calc">
+
+    <div class="display">
+      <div class="mem-ind" id="memInd">M</div>
+      <div id="history"></div>
+      <input id="disp" value="0" readonly />
+    </div>
+
+    <div class="grid">
+
+      <button class="func" onclick="clearAll()">C</button>
+      <button class="func" onclick="backspace()">Delete</button>
+      <button class="func" onclick="toggleDeg()">deg/rad</button>
+      <button class="func" onclick="append('π')">π</button>
+      <button class="func" onclick="append('e')">e</button>
+      <button class="op"   onclick="setOp('/')">/</button>
+
+      <button class="func" onclick="memClear()">MC</button>
+      <button class="func" onclick="memRecall()">MR</button>
+      <button class="func" onclick="memAdd()">M+</button>
+      <button class="func" onclick="memSub()">M-</button>
+      <button class="func" onclick="powY()">xʸ</button>
+      <button class="op"   onclick="setOp('*')">*</button>
+
+      <button class="func" onclick="fn('sin')">sin</button>
+      <button class="func" onclick="fn('cos')">cos</button>
+      <button class="func" onclick="fn('tan')">tan</button>
+      <button class="func" onclick="fn('asin')">sin⁻¹</button>
+      <button class="func" onclick="fn('acos')">cos⁻¹</button>
+      <button class="op"   onclick="setOp('-')">-</button>
+
+      <button class="func" onclick="fn('log')">log₁₀</button>
+      <button class="func" onclick="fn('ln')">ln</button>
+      <button class="func" onclick="fn('log2')">log₂</button>
+      <button class="func" onclick="fn('sqrt')">√</button>
+      <button class="func" onclick="fn('cbrt')">∛</button>
+      <button class="op"   onclick="setOp('+')">+</button>
+
+      <button class="num" onclick="append('7')">7</button>
+      <button class="num" onclick="append('8')">8</button>
+      <button class="num" onclick="append('9')">9</button>
+      <button class="func" onclick="fn('sq')">x²</button>
+      <button class="func" onclick="fn('cube')">x³</button>
+      <button class="eq"   onclick="equals()">=</button>
+
+      <button class="num" onclick="append('4')">4</button>
+      <button class="num" onclick="append('5')">5</button>
+      <button class="num" onclick="append('6')">6</button>
+      <button class="func" onclick="fn('pow10')">10ˣ</button>
+      <button class="func" onclick="fn('pow2')">2ˣ</button>
+
+      <button class="num" onclick="append('1')">1</button>
+      <button class="num" onclick="append('2')">2</button>
+      <button class="num" onclick="append('3')">3</button>
+      <button class="func" onclick="fn('powE')">eˣ</button>
+      <button class="func" onclick="fn('fact')">n!</button>
+
+      <button class="num zero" onclick="append('0')">0</button>
+      <button class="dot" onclick="append('.')">.</button>
+      <button class="func" onclick="fn('inv')">1/x</button>
+      <button class="func" onclick="fn('percent')">%</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
